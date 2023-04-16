@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>! ce site est une MAQUETTE !</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function addToCart(productName) {
+            alert("Le produit '" + productName + "' a été ajouté à votre panier !");
+        }
+
+        let currentIndex = 0;
+
+        function showNextProduct() {
+            const products = document.getElementsByClassName("product");
+            products[currentIndex].classList.remove("fade-in");
+            products[currentIndex].classList.add("fade-out");
+
+            currentIndex = (currentIndex + 1) % products.length;
+
+            products[currentIndex].classList.remove("fade-out");
+            products[currentIndex].classList.add("fade-in");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>! ce site est une MAQUETTE ! <br> RWild votre specialiste des complements alimentaires en calcium</h1>
+    </header>
+    <main>
+        
+<!-- Insérer cet encart après la balise <main> et avant la section "container" -->
+<div class="description-container">
+    <p>        
+"Le calcium est un minéral important pour notre corps. Il est essentiel pour la formation et la santé des os et des dents, ainsi que pour le bon fonctionnement des muscles, des nerfs et du cœur. Cependant, il peut être difficile d'obtenir suffisamment de calcium uniquement à partir de l'alimentation. Les compléments alimentaires en calcium peuvent donc être une excellente option pour combler les lacunes en calcium de notre alimentation et maintenir une bonne santé osseuse. En prenant des compléments alimentaires en calcium régulièrement, vous pouvez aider à réduire le risque de fractures, de maladies osseuses et d'ostéoporose, surtout si vous êtes une femme en post-ménopause. N'oubliez pas que les compléments alimentaires en calcium doivent être pris en conjonction avec une alimentation équilibrée et un mode de vie sain pour obtenir les meilleurs résultats."
+<br><br>
+    
+"الكالسيوم هو معدن مهم لجسمنا. فهو ضروري لتكوين وصحة العظام والأسنان، بالإضافة إلى الحفاظ على صحة العضلات والأعصاب والقلب. ومع ذلك، يمكن أن يكون من الصعب الحصول على كمية كافية من الكالسيوم فقط من الطعام. لذا، يمكن أن تكون المكملات الغذائية من الكالسيوم خيارًا ممتازًا لسد الفجوات في تناول الكالسيوم من الطعام والحفاظ على الصحة العظمية الجيدة. من خلال تناول المكملات الغذائية المحتوية على الكالسيوم بانتظام، يمكنك المساعدة في تقليل مخاطر الكسور، والأمراض العظمية وهشاشة العظام، خاصة إذا كنت امرأة بعد سن اليأس. لا تنسى أن المكملات الغذائية من الكالسيوم يجب أن تتمتع بتناولها بالإضافة إلى تناول طعام متوازن ونمط حياة صحي للحصول على أفضل النتائج."
+    
+    </p>
+</div>
+
+    
+        
+<section class="container">
+    <div class="product fade-in" id="product-1">
+        <img src="Calcium-SOLD.png" alt="complement Calcium RWild">
+        <h2>Carbonate de calcium</h2>
+        <div class="rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p>Prix : <s class="red-text">100 Dh</s>   <span class="green-text">80 Dh  (20% OFF)</span></p>
+        <p class="product-description">bien absorbé avec de la nourriture</p>
+        <button onclick="addToCart('Complément Alimentaire 1')">Ajouter au panier</button>
+    </div>
+    <div class="product fade-out" id="product-2">
+        <img src="Calcium-OUT.png" alt="complement Calcium RWild">
+        <h2>Citrate de calcium</h2>
+        <div class="rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p><s class="red-text">Prix : 100 Dh</s></p>
+        <p class="product-description">Bien absorbé, surtout pour les personnes âgées et celles ayant une acidité gastrique réduite.</p>
+        <button onclick="addToCart('Complément Alimentaire 2')">Ajouter au panier</button>
+    </div>
+    <div class="product fade-out" id="product-3">
+        <img src="Calcium.png" alt="complement Calcium RWild">
+        <h2>Lactate de calcium</h2>
+        <div class="rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p>Prix : 80 Dh</p>
+        <p class="product-description">Bien absorbé, peut être utile pour les personnes ayant des problèmes d'estomac.</p>
+        <button onclick="addToCart('Complément Alimentaire 3')">Ajouter au panier</button>
+    </div>
+    <div class="product fade-out" id="product-4">
+        <img src="Calcium.png" alt="complement Calcium RWild">
+        <h2>Gluconate de calcium</h2>
+        <div class="rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p>Prix : 80 Dh</p>
+        <p class="product-description">Bien absorbé, peut être utile pour les personnes ayant des problèmes d'estomac.</p>
+        <button onclick="addToCart('Complément Alimentaire 4')">Ajouter au panier</button>
+    </div>
+    <div class="product fade-out" id="product-5">
+        <img src="Calcium.png" alt="complement Calcium RWild">
+        <h2>Malate de calcium</h2>
+        <div class="rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p>Prix : 80 Dh</p>
+        <p class="product-description">Bien absorbé, peut être utile pour les personnes ayant des problèmes d'estomac.</p>
+        <button onclick="addToCart('Complément Alimentaire 5')">Ajouter au panier</button>
+    </div>
+</section>
+
+        
+        <div class="arrow-container" onclick="showNextProduct()">
+            <span>Produit suivant</span><span class="arrow">➤</span>
+        </div>        
+        
+
+        
+<div class="table-container">
+  <table class="my-table">
+    <thead>
+      <tr>
+        <th>Type de calcium</th>
+        <th>Avantages</th>
+        <th>Inconvénients</th>
+        <th>Posologie recommandée</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Carbonate de calcium</td>
+        <td>Le moins cher, bien absorbé avec de la nourriture.</td>
+        <td>Peut être moins bien absorbé pour les personnes ayant une acidité gastrique réduite.</td>
+        <td>500-1000 mg, 1 à 3 fois par jour avec les repas.</td>
+      </tr>
+      <tr>
+        <td>Citrate de calcium</td>
+        <td>Bien absorbé, surtout pour les personnes âgées et celles ayant une acidité gastrique réduite.</td>
+        <td>Plus cher que le carbonate de calcium.</td>
+        <td>500-1000 mg, 1 à 2 fois par jour avec ou sans nourriture.</td>
+      </tr>
+      <tr>
+        <td>Lactate de calcium</td>
+        <td>Bien absorbé, peut être utile pour les personnes ayant des problèmes d'estomac.</td>
+        <td>Moins couramment utilisé dans les suppléments.</td>
+        <td>200-800 mg, 1 à 3 fois par jour avec les repas.</td>
+      </tr>
+      <tr>
+        <td>Gluconate de calcium</td>
+        <td>Bien absorbé, peut être utile pour les personnes ayant des problèmes d'estomac.</td>
+        <td>Moins couramment utilisé dans les suppléments.</td>
+        <td>500-1000 mg, 1 à 2 fois par jour avec ou sans nourriture.</td>
+      </tr>
+      <tr>
+        <td>Malate de calcium</td>
+        <td>Bien absorbé, peut être utile pour les personnes ayant des problèmes d'estomac.</td>
+        <td>Moins couramment utilisé dans les suppléments.</td>
+        <td>500-1000 mg, 1 à 3 fois par jour avec les repas.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+        
+        
+        
+        
+        
+        
+        
+        
+    </main>
+
+
+    <footer>
+        <p>Suivez-nous sur les réseaux sociaux :</p>
+        <div class="social-container">
+            <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="Facebook" class="social-icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="insta.jpeg" alt="Instagram" class="social-icon"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="twitter.png" alt="Twitter" class="social-icon"></a>
+        </div>
+    </footer>
+</
